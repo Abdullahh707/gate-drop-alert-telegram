@@ -29,7 +29,8 @@ def check_prices():
             continue  # استثناء ETF
 
         change = float(coin["change_percentage"])
-        if change <= -30:
+        if change >= 0:
+:
             send_alert(f"⚠️ {coin['currency_pair']} هبط {change}% خلال 24 ساعة")
 
 while True:
